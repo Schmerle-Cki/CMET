@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>实验参与查询</title>
+<script>
+// 预设的已参与实验的人员名单
+const participants = ["张三", "李四", "王五"];
+
+function checkParticipant() {
+    var name = document.getElementById("nameInput").value;
+    var result = participants.includes(name) ? "您已参加过实验。" : "您尚未参加过实验。";
+    document.getElementById("result").innerText = result;
+}
+</script>
+</head>
+<body>
+<h1>实验参与查询</h1>
+<label for="nameInput">请输入您的名字：</label>
+<input type="text" id="nameInput" name="name">
+<button onclick="checkParticipant()">查询</button>
+<p id="result"></p>
+</body>
+</html>
